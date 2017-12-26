@@ -1,0 +1,264 @@
+./comp 2
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: Global                                         Parent: null
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+printStr                 int                      function                        4       0       printStr
+printInt                 int                      function                        4       4       printInt
+readInt                  int                      function                        4       8       readInt
+readFlt                  int                      function                        4       12      readFlt
+printFlt                 int                      function                        4       16      printFlt
+a                        int                      local                           4       20      null
+b                        int                      local       1                   4       24      null
+t000                     int                      temp        1                   4       28      null
+c                        char                     local                           1       32      null
+d                        char                     local       'a'                 1       33      null
+t001                     char                     temp        'a'                 1       34      null
+main                     int                      function                        4       35      main
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printStr                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(char)                param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printInt                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        int                      param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: readInt                                        Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(int)                 param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: readFlt                                        Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(int)                 param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printFlt                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        int                      param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: main                                           Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+retVal                   int                      local                           4       0       null
+mat                      Matrix(2,2,double)       local                           40      36      null
+t000                     int                      temp        2                   4       44      null
+t001                     int                      temp        2                   4       48      null
+i                        int                      local                           4       52      null
+j                        int                      local                           4       56      null
+printStr                 int                      local                           4       60      null
+t002                     ptr(char)                temp        "enter the 2*2 matrix elements \n"4       64      null
+t003                     int                      temp                            4       68      null
+d                        double                   local                           8       72      null
+t004                     int                      temp        0                   4       80      null
+t005                     int                      temp        2                   4       84      null
+t006                     int                      temp                            4       88      null
+t007                     int                      temp        0                   4       92      null
+t008                     int                      temp        2                   4       96      null
+t009                     int                      temp                            4       100     null
+readFlt                  int                      local                           4       104     null
+t010                     ptr(double)              temp                            4       108     null
+t011                     int                      temp                            4       112     null
+t012                     int                      temp                            4       116     null
+t013                     int                      temp                            4       120     null
+t014                     int                      temp                            4       124     null
+t015                     int                      temp                            4       128     null
+t016                     ptr(char)                temp        "\n printing the entered matrix \n"4       132     null
+t017                     int                      temp                            4       136     null
+t018                     int                      temp        0                   4       140     null
+t019                     int                      temp        2                   4       144     null
+t020                     int                      temp                            4       148     null
+t021                     int                      temp        0                   4       152     null
+t022                     int                      temp        2                   4       156     null
+t023                     int                      temp                            4       160     null
+printFlt                 int                      local                           4       164     null
+t024                     int                      temp                            4       168     null
+t025                     int                      temp                            4       172     null
+t026                     int                      temp                            4       176     null
+t027                     int                      temp                            4       180     null
+t028                     double                   temp                            4       184     null
+t029                     int                      temp                            4       188     null
+t030                     ptr(char)                temp        "\t"                4       192     null
+t031                     int                      temp                            4       196     null
+t032                     ptr(char)                temp        "\n"                4       200     null
+t033                     int                      temp                            4       204     null
+t034                     int                      temp        0                   4       208     null
+
+==============================
+Quad Translation
+------------------------------
+0   ->	t000=1
+1   ->	b=t000
+2   ->	op2
+3   ->	d=t001
+
+main: 
+
+5   ->	t000=2
+6   ->	t001=2
+7   ->	t002 = 0
+8   ->	param t002
+9   ->	t003 = call printStr, 1
+10  ->	t004=0
+11  ->	i=t004
+12  ->	t005=2
+13  ->	if i < t005 goto 18
+14  ->	goto 36
+15  ->	t006=i
+16  ->	i=t006 + 1
+17  ->	goto 12
+18  ->	t007=0
+19  ->	j=t007
+20  ->	t008=2
+21  ->	if j < t008 goto 26
+22  ->	goto 15
+23  ->	t009=j
+24  ->	j=t009 + 1
+25  ->	goto 20
+26  ->	t010 = &d
+27  ->	param t010
+28  ->	t011 = call readFlt, 1
+29  ->	t013=i * 16
+30  ->	t012=mat + t013
+31  ->	t015=j * 8
+32  ->	t014=t012 + t015
+33  ->	mat[t014] = d
+34  ->	goto 23
+35  ->	goto 15
+36  ->	t016 = 1
+37  ->	param t016
+38  ->	t017 = call printStr, 1
+39  ->	t018=0
+40  ->	i=t018
+41  ->	t019=2
+42  ->	if i < t019 goto 47
+43  ->	goto 70
+44  ->	t020=i
+45  ->	i=t020 + 1
+46  ->	goto 41
+47  ->	t021=0
+48  ->	j=t021
+49  ->	t022=2
+50  ->	if j < t022 goto 55
+51  ->	goto 66
+52  ->	t023=j
+53  ->	j=t023 + 1
+54  ->	goto 49
+55  ->	t025=i * 16
+56  ->	t024=mat + t025
+57  ->	t027=j * 8
+58  ->	t026=t024 + t027
+59  ->	t028 = mat[t026]
+60  ->	param t028
+61  ->	t029 = call printFlt, 1
+62  ->	t030 = 2
+63  ->	param t030
+64  ->	t031 = call printStr, 1
+65  ->	goto 52
+66  ->	t032 = 3
+67  ->	param t032
+68  ->	t033 = call printStr, 1
+69  ->	goto 44
+70  ->	t034=0
+71  ->	ret t034
+72  ->	
+------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Quad Table ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+index    op     arg 1   arg 2   result  
+0        =      1               t000    
+1        =      t000            b       
+2        =      'a'             t001    
+3        =      t001            d       
+4        op                     main    
+5        =      2               t000    
+6        =      2               t001    
+7        =      0               t002    
+8        param                  t002    
+9        call   printStr1       t003    
+10       =      0               t004    
+11       =      t004            i       
+12       =      2               t005    
+13       <      i       t005    18      
+14       goto                   36      
+15       =      i               t006    
+16       +      t006    1       i       
+17       goto                   12      
+18       =      0               t007    
+19       =      t007            j       
+20       =      2               t008    
+21       <      j       t008    26      
+22       goto                   15      
+23       =      j               t009    
+24       +      t009    1       j       
+25       goto                   20      
+26       &      d               t010    
+27       param                  t010    
+28       call   readFlt 1       t011    
+29       *      i       16      t013    
+30       +      mat     t013    t012    
+31       *      j       8       t015    
+32       +      t012    t015    t014    
+33       []=    t014    d       mat     
+34       goto                   23      
+35       goto                   15      
+36       =      1               t016    
+37       param                  t016    
+38       call   printStr1       t017    
+39       =      0               t018    
+40       =      t018            i       
+41       =      2               t019    
+42       <      i       t019    47      
+43       goto                   70      
+44       =      i               t020    
+45       +      t020    1       i       
+46       goto                   41      
+47       =      0               t021    
+48       =      t021            j       
+49       =      2               t022    
+50       <      j       t022    55      
+51       goto                   66      
+52       =      j               t023    
+53       +      t023    1       j       
+54       goto                   49      
+55       *      i       16      t025    
+56       +      mat     t025    t024    
+57       *      j       8       t027    
+58       +      t024    t027    t026    
+59       =[]    mat     t026    t028    
+60       param                  t028    
+61       call   printFlt1       t029    
+62       =      2               t030    
+63       param                  t030    
+64       call   printStr1       t031    
+65       goto                   52      
+66       =      3               t032    
+67       param                  t032    
+68       call   printStr1       t033    
+69       goto                   44      
+70       =      0               t034    
+71       ret                    t034    
+72       op                     main    
+gcc -Wall -c ass5_15CS10045_2.s
+gcc ass5_15CS10045_2.o -o test2 -L. -lprintlib

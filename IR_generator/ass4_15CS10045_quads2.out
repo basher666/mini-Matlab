@@ -1,0 +1,166 @@
+symbol table printing start 
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: Global                                         Parent: null
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+main                     int                      function                        4       0       main
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: main                                           Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+retVal                   int                      local                           4       0       null
+t                        char                     local       'z'                 1       4       null
+#t000                    char                     temp        'z'                 1       5       null
+i                        int                      local       2                   4       6       null
+#t001                    int                      temp        23                  4       10      null
+d                        double                   local       423.3               8       14      null
+#t002                    double                   temp        423.3               8       22      null
+m                        Matrix(2,3,double)       local       {1.1,2.1,3.1;4.1,5.1,6.1}56      30      null
+#t003                    int                      temp        2                   4       86      null
+#t004                    int                      temp        3                   4       90      null
+#t005                    double                   temp        1.1                 8       94      null
+#t006                    double                   temp        2.1                 8       102     null
+#t007                    double                   temp        3.1                 8       110     null
+#t008                    double                   temp        4.1                 8       118     null
+#t009                    double                   temp        5.1                 8       126     null
+#t010                    double                   temp        6.1                 8       134     null
+#t011                    Matrix(3,2,double)       temp                            4       142     null
+#t012                    Matrix(2,3,double)       temp                            4       146     null
+#t013                    int                      temp        2                   4       150     null
+p                        ptr(int)                 local                           4       154     null
+#t014                    int                      temp        1                   4       158     null
+#t015                    ptr(null)                temp                            4       162     null
+#t016                    ptr(int)                 temp                            4       166     null
+#t017                    int                      temp                            4       170     null
+#t018                    int                      temp                            4       174     null
+#t019                    int                      temp                            4       178     null
+#t020                    int                      temp                            4       182     null
+#t021                    double                   temp        2.42                8       186     null
+#t022                    int                      temp                            4       194     null
+#t023                    int                      temp                            4       198     null
+#t024                    int                      temp                            4       202     null
+#t025                    int                      temp                            4       206     null
+#t026                    int                      temp                            4       210     null
+#t027                    int                      temp                            4       214     null
+#t028                    int                      temp                            4       218     null
+#t029                    int                      temp                            4       222     null
+#t030                    double                   temp                            4       226     null
+#t031                    int                      temp        2                   4       230     null
+#t032                    int                      temp                            4       234     null
+#t033                    int                      temp                            4       238     null
+#t034                    double                   temp                            8       242     null
+#t035                    int                      temp        1                   4       250     null
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+quad array printing start
+==============================
+Quad Translation
+------------------------------
+
+main: 
+
+1   ->	#t000='z'
+2   ->	t=#t000
+3   ->	#t001=23
+4   ->	i=#t001
+5   ->	#t002=423.3
+6   ->	d=#t002
+7   ->	#t003=2
+8   ->	#t004=3
+9   ->	#t005=1.1
+10  ->	#t006=2.1
+11  ->	#t007=3.1
+12  ->	#t008=4.1
+13  ->	#t009=5.1
+14  ->	#t010=6.1
+15  ->	#t011 = m.'
+16  ->	#t012 = #t011.'
+17  ->	m=#t012
+18  ->	#t013=2
+19  ->	i=#t013
+20  ->	#t014=1
+21  ->	if i >= #t014 goto 23
+22  ->	goto 26
+23  ->	#t015=p
+24  ->	p=#t015 - 4
+25  ->	goto 20
+26  ->	#t016 = &i
+27  ->	p=#t016
+28  ->	#t018=i * 24
+29  ->	#t017=m + #t018
+30  ->	#t020=i * 8
+31  ->	#t019=#t017 + #t020
+32  ->	#t021=2.42
+33  ->	m[#t019] = #t021
+34  ->	#t023=i * 24
+35  ->	#t022=m + #t023
+36  ->	#t025=i * 8
+37  ->	#t024=#t022 + #t025
+38  ->	#t027=i * 24
+39  ->	#t026=m + #t027
+40  ->	#t029=i * 8
+41  ->	#t028=#t026 + #t029
+42  ->	#t030 = m[#t028]
+43  ->	#t031=2
+44  ->	#t032=double2int(#t030)
+45  ->	#t033=#t032 - #t031
+46  ->	#t034=int2double(#t033)
+47  ->	m[#t024] = #t034
+48  ->	#t035=1
+49  ->	ret #t035
+------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Quad Table ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+index    op     arg 1   arg 2   result  
+0        op                     main    
+1        =      'z'             #t000   
+2        =      #t000           t       
+3        =      23              #t001   
+4        =      #t001           i       
+5        =      423.3           #t002   
+6        =      #t002           d       
+7        =      2               #t003   
+8        =      3               #t004   
+9        =      1.1             #t005   
+10       =      2.1             #t006   
+11       =      3.1             #t007   
+12       =      4.1             #t008   
+13       =      5.1             #t009   
+14       =      6.1             #t010   
+15       op     m               #t011   
+16       op     #t011           #t012   
+17       =      #t012           m       
+18       =      2               #t013   
+19       =      #t013           i       
+20       =      1               #t014   
+21       >=     i       #t014   23      
+22       goto                   26      
+23       =      p               #t015   
+24       -      #t015   4       p       
+25       goto                   20      
+26       &      i               #t016   
+27       =      #t016           p       
+28       *      i       24      #t018   
+29       +      m       #t018   #t017   
+30       *      i       8       #t020   
+31       +      #t017   #t020   #t019   
+32       =      2.42            #t021   
+33       op     #t019   #t021   m       
+34       *      i       24      #t023   
+35       +      m       #t023   #t022   
+36       *      i       8       #t025   
+37       +      #t022   #t025   #t024   
+38       *      i       24      #t027   
+39       +      m       #t027   #t026   
+40       *      i       8       #t029   
+41       +      #t026   #t029   #t028   
+42       =[]R   m       #t028   #t030   
+43       =      2               #t031   
+44       =      double2int(#t030)        #t032   
+45       -      #t032   #t031   #t033   
+46       =      int2double(#t033)        #t034   
+47       op     #t024   #t034   m       
+48       =      1               #t035   
+49       ret                    #t035   

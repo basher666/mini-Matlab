@@ -1,0 +1,772 @@
+./comp 5
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: Global                                         Parent: null
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+printStr                 int                      function                        4       0       printStr
+printInt                 int                      function                        4       4       printInt
+readInt                  int                      function                        4       8       readInt
+readFlt                  int                      function                        4       12      readFlt
+printFlt                 int                      function                        4       16      printFlt
+main                     int                      function                        4       20      main
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printStr                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(char)                param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printInt                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        int                      param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: readInt                                        Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(int)                 param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: readFlt                                        Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(int)                 param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printFlt                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        int                      param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: main                                           Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+retVal                   int                      local                           4       0       null
+m1                       Matrix(2,3,double)       local       {1.3,2.3,3.3;4.3,5.3,6.3}56      52      null
+t000                     int                      temp        2                   4       60      null
+t001                     int                      temp        3                   4       64      null
+t002                     double                   temp        1.3                 8       68      null
+t003                     double                   temp        2.3                 8       76      null
+t004                     double                   temp        3.3                 8       84      null
+t005                     double                   temp        4.3                 8       92      null
+t006                     double                   temp        5.3                 8       100     null
+t007                     double                   temp        6.3                 8       108     null
+m2                       Matrix(2,3,double)       local       {42.3,22.3,5.3;2221.3,5.3,0.3}56      164     null
+t008                     int                      temp        2                   4       172     null
+t009                     int                      temp        3                   4       176     null
+t010                     double                   temp        42.3                8       180     null
+t011                     double                   temp        22.3                8       188     null
+t012                     double                   temp        5.3                 8       196     null
+t013                     double                   temp        2221.3              8       204     null
+t014                     double                   temp        5.3                 8       212     null
+t015                     double                   temp        0.3                 8       220     null
+m_add                    Matrix(2,3,double)       local                           56      276     null
+t016                     int                      temp        2                   4       284     null
+t017                     int                      temp        3                   4       288     null
+m_sub                    Matrix(2,3,double)       local                           56      340     null
+t018                     int                      temp        2                   4       348     null
+t019                     int                      temp        3                   4       352     null
+m_trans                  Matrix(3,2,double)       local                           56      404     null
+t020                     int                      temp        3                   4       412     null
+t021                     int                      temp        2                   4       416     null
+i                        int                      local                           4       420     null
+j                        int                      local                           4       424     null
+printStr                 int                      local                           4       428     null
+t022                     ptr(char)                temp        "matrix 1 \n"       4       432     null
+t023                     int                      temp                            4       436     null
+t024                     int                      temp        0                   4       440     null
+t025                     int                      temp        2                   4       444     null
+t026                     int                      temp                            4       448     null
+t027                     int                      temp        0                   4       452     null
+t028                     int                      temp        3                   4       456     null
+t029                     int                      temp                            4       460     null
+printFlt                 int                      local                           4       464     null
+t030                     int                      temp                            4       468     null
+t031                     int                      temp                            4       472     null
+t032                     int                      temp                            4       476     null
+t033                     int                      temp                            4       480     null
+t034                     double                   temp                            4       484     null
+t035                     int                      temp                            4       488     null
+t036                     ptr(char)                temp        "\t"                4       492     null
+t037                     int                      temp                            4       496     null
+t038                     ptr(char)                temp        "\n"                4       500     null
+t039                     int                      temp                            4       504     null
+t040                     ptr(char)                temp        "matrix 2 \n"       4       508     null
+t041                     int                      temp                            4       512     null
+t042                     int                      temp        0                   4       516     null
+t043                     int                      temp        2                   4       520     null
+t044                     int                      temp                            4       524     null
+t045                     int                      temp        0                   4       528     null
+t046                     int                      temp        3                   4       532     null
+t047                     int                      temp                            4       536     null
+t048                     int                      temp                            4       540     null
+t049                     int                      temp                            4       544     null
+t050                     int                      temp                            4       548     null
+t051                     int                      temp                            4       552     null
+t052                     double                   temp                            4       556     null
+t053                     int                      temp                            4       560     null
+t054                     ptr(char)                temp        "\t"                4       564     null
+t055                     int                      temp                            4       568     null
+t056                     ptr(char)                temp        "\n"                4       572     null
+t057                     int                      temp                            4       576     null
+t058                     Matrix(2,3,double)       temp                            56      628     null
+t059                     Matrix(2,3,double)       temp                            56      684     null
+t060                     Matrix(2,3,double)       temp                            56      740     null
+t061                     double                   temp                            8       748     null
+t062                     double                   temp                            8       756     null
+t063                     double                   temp                            8       764     null
+t064                     ptr(char)                temp        "matrix m_add = m1+m2 \n"4       772     null
+t065                     int                      temp                            4       776     null
+t066                     int                      temp        0                   4       780     null
+t067                     int                      temp        2                   4       784     null
+t068                     int                      temp                            4       788     null
+t069                     int                      temp        0                   4       792     null
+t070                     int                      temp        3                   4       796     null
+t071                     int                      temp                            4       800     null
+t072                     int                      temp                            4       804     null
+t073                     int                      temp                            4       808     null
+t074                     int                      temp                            4       812     null
+t075                     int                      temp                            4       816     null
+t076                     double                   temp                            4       820     null
+t077                     int                      temp                            4       824     null
+t078                     ptr(char)                temp        "\t"                4       828     null
+t079                     int                      temp                            4       832     null
+t080                     ptr(char)                temp        "\n"                4       836     null
+t081                     int                      temp                            4       840     null
+t082                     Matrix(2,3,double)       temp                            56      892     null
+t083                     Matrix(2,3,double)       temp                            56      948     null
+t084                     Matrix(2,3,double)       temp                            56      1004    null
+t085                     double                   temp                            8       1012    null
+t086                     double                   temp                            8       1020    null
+t087                     double                   temp                            8       1028    null
+t088                     ptr(char)                temp        "matrix m_sub = m1-m2 \n"4       1036    null
+t089                     int                      temp                            4       1040    null
+t090                     int                      temp        0                   4       1044    null
+t091                     int                      temp        2                   4       1048    null
+t092                     int                      temp                            4       1052    null
+t093                     int                      temp        0                   4       1056    null
+t094                     int                      temp        3                   4       1060    null
+t095                     int                      temp                            4       1064    null
+t096                     int                      temp                            4       1068    null
+t097                     int                      temp                            4       1072    null
+t098                     int                      temp                            4       1076    null
+t099                     int                      temp                            4       1080    null
+t100                     double                   temp                            4       1084    null
+t101                     int                      temp                            4       1088    null
+t102                     ptr(char)                temp        "\t"                4       1092    null
+t103                     int                      temp                            4       1096    null
+t104                     ptr(char)                temp        "\n"                4       1100    null
+t105                     int                      temp                            4       1104    null
+t106                     Matrix(3,2,double)       temp                            56      1156    null
+t107                     double                   temp                            8       1164    null
+t108                     ptr(char)                temp        "matrix m_trans = m1 .' \n"4       1172    null
+t109                     int                      temp                            4       1176    null
+t110                     int                      temp        0                   4       1180    null
+t111                     int                      temp        3                   4       1184    null
+t112                     int                      temp                            4       1188    null
+t113                     int                      temp        0                   4       1192    null
+t114                     int                      temp        2                   4       1196    null
+t115                     int                      temp                            4       1200    null
+t116                     int                      temp                            4       1204    null
+t117                     int                      temp                            4       1208    null
+t118                     int                      temp                            4       1212    null
+t119                     int                      temp                            4       1216    null
+t120                     double                   temp                            4       1220    null
+t121                     int                      temp                            4       1224    null
+t122                     ptr(char)                temp        "\t"                4       1228    null
+t123                     int                      temp                            4       1232    null
+t124                     ptr(char)                temp        "\n"                4       1236    null
+t125                     int                      temp                            4       1240    null
+t126                     int                      temp        0                   4       1244    null
+
+==============================
+Quad Translation
+------------------------------
+
+main: 
+
+1   ->	t000=2
+2   ->	t001=3
+3   ->	t002 = 1.3
+4   ->	t003 = 2.3
+5   ->	t004 = 3.3
+6   ->	t005 = 4.3
+7   ->	t006 = 5.3
+8   ->	t007 = 6.3
+9   ->	m1[0]=t002
+10  ->	m1[8]=t003
+11  ->	m1[16]=t004
+12  ->	m1[24]=t005
+13  ->	m1[32]=t006
+14  ->	m1[40]=t007
+15  ->	t008=2
+16  ->	t009=3
+17  ->	t010 = 42.3
+18  ->	t011 = 22.3
+19  ->	t012 = 5.3
+20  ->	t013 = 2221.3
+21  ->	t014 = 5.3
+22  ->	t015 = 0.3
+23  ->	m2[0]=t010
+24  ->	m2[8]=t011
+25  ->	m2[16]=t012
+26  ->	m2[24]=t013
+27  ->	m2[32]=t014
+28  ->	m2[40]=t015
+29  ->	t016=2
+30  ->	t017=3
+31  ->	t018=2
+32  ->	t019=3
+33  ->	t020=3
+34  ->	t021=2
+35  ->	t022 = 0
+36  ->	param t022
+37  ->	t023 = call printStr, 1
+38  ->	t024=0
+39  ->	i=t024
+40  ->	t025=2
+41  ->	if i < t025 goto 46
+42  ->	goto 69
+43  ->	t026=i
+44  ->	i=t026 + 1
+45  ->	goto 40
+46  ->	t027=0
+47  ->	j=t027
+48  ->	t028=3
+49  ->	if j < t028 goto 54
+50  ->	goto 65
+51  ->	t029=j
+52  ->	j=t029 + 1
+53  ->	goto 48
+54  ->	t031=i * 24
+55  ->	t030=m1 + t031
+56  ->	t033=j * 8
+57  ->	t032=t030 + t033
+58  ->	t034 = m1[t032]
+59  ->	param t034
+60  ->	t035 = call printFlt, 1
+61  ->	t036 = 1
+62  ->	param t036
+63  ->	t037 = call printStr, 1
+64  ->	goto 51
+65  ->	t038 = 2
+66  ->	param t038
+67  ->	t039 = call printStr, 1
+68  ->	goto 43
+69  ->	t040 = 3
+70  ->	param t040
+71  ->	t041 = call printStr, 1
+72  ->	t042=0
+73  ->	i=t042
+74  ->	t043=2
+75  ->	if i < t043 goto 80
+76  ->	goto 103
+77  ->	t044=i
+78  ->	i=t044 + 1
+79  ->	goto 74
+80  ->	t045=0
+81  ->	j=t045
+82  ->	t046=3
+83  ->	if j < t046 goto 88
+84  ->	goto 99
+85  ->	t047=j
+86  ->	j=t047 + 1
+87  ->	goto 82
+88  ->	t049=i * 24
+89  ->	t048=m2 + t049
+90  ->	t051=j * 8
+91  ->	t050=t048 + t051
+92  ->	t052 = m2[t050]
+93  ->	param t052
+94  ->	t053 = call printFlt, 1
+95  ->	t054 = 4
+96  ->	param t054
+97  ->	t055 = call printStr, 1
+98  ->	goto 85
+99  ->	t056 = 5
+100 ->	param t056
+101 ->	t057 = call printStr, 1
+102 ->	goto 77
+103 ->	t058=m1
+104 ->	t059=m2
+105 ->	t061 = t058[0]
+106 ->	t062 = t059[0]
+107 ->	t063=t061 + t062
+108 ->	t060[0] = t063
+109 ->	t061 = t058[8]
+110 ->	t062 = t059[8]
+111 ->	t063=t061 + t062
+112 ->	t060[8] = t063
+113 ->	t061 = t058[16]
+114 ->	t062 = t059[16]
+115 ->	t063=t061 + t062
+116 ->	t060[16] = t063
+117 ->	t061 = t058[24]
+118 ->	t062 = t059[24]
+119 ->	t063=t061 + t062
+120 ->	t060[24] = t063
+121 ->	t061 = t058[32]
+122 ->	t062 = t059[32]
+123 ->	t063=t061 + t062
+124 ->	t060[32] = t063
+125 ->	t061 = t058[40]
+126 ->	t062 = t059[40]
+127 ->	t063=t061 + t062
+128 ->	t060[40] = t063
+129 ->	t061 = t058[48]
+130 ->	t062 = t059[48]
+131 ->	t063=t061 + t062
+132 ->	t060[48] = t063
+133 ->	m_add=t060
+134 ->	t064 = 6
+135 ->	param t064
+136 ->	t065 = call printStr, 1
+137 ->	t066=0
+138 ->	i=t066
+139 ->	t067=2
+140 ->	if i < t067 goto 145
+141 ->	goto 168
+142 ->	t068=i
+143 ->	i=t068 + 1
+144 ->	goto 139
+145 ->	t069=0
+146 ->	j=t069
+147 ->	t070=3
+148 ->	if j < t070 goto 153
+149 ->	goto 164
+150 ->	t071=j
+151 ->	j=t071 + 1
+152 ->	goto 147
+153 ->	t073=i * 24
+154 ->	t072=m_add + t073
+155 ->	t075=j * 8
+156 ->	t074=t072 + t075
+157 ->	t076 = m_add[t074]
+158 ->	param t076
+159 ->	t077 = call printFlt, 1
+160 ->	t078 = 7
+161 ->	param t078
+162 ->	t079 = call printStr, 1
+163 ->	goto 150
+164 ->	t080 = 8
+165 ->	param t080
+166 ->	t081 = call printStr, 1
+167 ->	goto 142
+168 ->	t082=m1
+169 ->	t083=m2
+170 ->	t085 = t082[0]
+171 ->	t086 = t083[0]
+172 ->	t087=t085 - t086
+173 ->	t084[0] = t087
+174 ->	t085 = t082[8]
+175 ->	t086 = t083[8]
+176 ->	t087=t085 - t086
+177 ->	t084[8] = t087
+178 ->	t085 = t082[16]
+179 ->	t086 = t083[16]
+180 ->	t087=t085 - t086
+181 ->	t084[16] = t087
+182 ->	t085 = t082[24]
+183 ->	t086 = t083[24]
+184 ->	t087=t085 - t086
+185 ->	t084[24] = t087
+186 ->	t085 = t082[32]
+187 ->	t086 = t083[32]
+188 ->	t087=t085 - t086
+189 ->	t084[32] = t087
+190 ->	t085 = t082[40]
+191 ->	t086 = t083[40]
+192 ->	t087=t085 - t086
+193 ->	t084[40] = t087
+194 ->	t085 = t082[48]
+195 ->	t086 = t083[48]
+196 ->	t087=t085 - t086
+197 ->	t084[48] = t087
+198 ->	m_sub=t084
+199 ->	t088 = 9
+200 ->	param t088
+201 ->	t089 = call printStr, 1
+202 ->	t090=0
+203 ->	i=t090
+204 ->	t091=2
+205 ->	if i < t091 goto 210
+206 ->	goto 233
+207 ->	t092=i
+208 ->	i=t092 + 1
+209 ->	goto 204
+210 ->	t093=0
+211 ->	j=t093
+212 ->	t094=3
+213 ->	if j < t094 goto 218
+214 ->	goto 229
+215 ->	t095=j
+216 ->	j=t095 + 1
+217 ->	goto 212
+218 ->	t097=i * 24
+219 ->	t096=m_sub + t097
+220 ->	t099=j * 8
+221 ->	t098=t096 + t099
+222 ->	t100 = m_sub[t098]
+223 ->	param t100
+224 ->	t101 = call printFlt, 1
+225 ->	t102 = 10
+226 ->	param t102
+227 ->	t103 = call printStr, 1
+228 ->	goto 215
+229 ->	t104 = 11
+230 ->	param t104
+231 ->	t105 = call printStr, 1
+232 ->	goto 207
+233 ->	t107 = m1[0]
+234 ->	t106[0] = t107
+235 ->	t107 = m1[8]
+236 ->	t106[16] = t107
+237 ->	t107 = m1[16]
+238 ->	t106[32] = t107
+239 ->	t107 = m1[24]
+240 ->	t106[8] = t107
+241 ->	t107 = m1[32]
+242 ->	t106[24] = t107
+243 ->	t107 = m1[40]
+244 ->	t106[40] = t107
+245 ->	m_trans=t106
+246 ->	t108 = 12
+247 ->	param t108
+248 ->	t109 = call printStr, 1
+249 ->	t110=0
+250 ->	i=t110
+251 ->	t111=3
+252 ->	if i < t111 goto 257
+253 ->	goto 280
+254 ->	t112=i
+255 ->	i=t112 + 1
+256 ->	goto 251
+257 ->	t113=0
+258 ->	j=t113
+259 ->	t114=2
+260 ->	if j < t114 goto 265
+261 ->	goto 276
+262 ->	t115=j
+263 ->	j=t115 + 1
+264 ->	goto 259
+265 ->	t117=i * 16
+266 ->	t116=m_trans + t117
+267 ->	t119=j * 8
+268 ->	t118=t116 + t119
+269 ->	t120 = m_trans[t118]
+270 ->	param t120
+271 ->	t121 = call printFlt, 1
+272 ->	t122 = 13
+273 ->	param t122
+274 ->	t123 = call printStr, 1
+275 ->	goto 262
+276 ->	t124 = 14
+277 ->	param t124
+278 ->	t125 = call printStr, 1
+279 ->	goto 254
+280 ->	t126=0
+281 ->	ret t126
+282 ->	
+------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Quad Table ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+index    op     arg 1   arg 2   result  
+0        op                     main    
+1        =      2               t000    
+2        =      3               t001    
+3        =      1.3             t002    
+4        =      2.3             t003    
+5        =      3.3             t004    
+6        =      4.3             t005    
+7        =      5.3             t006    
+8        =      6.3             t007    
+9        []=    0       t002    m1      
+10       []=    8       t003    m1      
+11       []=    16      t004    m1      
+12       []=    24      t005    m1      
+13       []=    32      t006    m1      
+14       []=    40      t007    m1      
+15       =      2               t008    
+16       =      3               t009    
+17       =      42.3            t010    
+18       =      22.3            t011    
+19       =      5.3             t012    
+20       =      2221.3          t013    
+21       =      5.3             t014    
+22       =      0.3             t015    
+23       []=    0       t010    m2      
+24       []=    8       t011    m2      
+25       []=    16      t012    m2      
+26       []=    24      t013    m2      
+27       []=    32      t014    m2      
+28       []=    40      t015    m2      
+29       =      2               t016    
+30       =      3               t017    
+31       =      2               t018    
+32       =      3               t019    
+33       =      3               t020    
+34       =      2               t021    
+35       =      0               t022    
+36       param                  t022    
+37       call   printStr1       t023    
+38       =      0               t024    
+39       =      t024            i       
+40       =      2               t025    
+41       <      i       t025    46      
+42       goto                   69      
+43       =      i               t026    
+44       +      t026    1       i       
+45       goto                   40      
+46       =      0               t027    
+47       =      t027            j       
+48       =      3               t028    
+49       <      j       t028    54      
+50       goto                   65      
+51       =      j               t029    
+52       +      t029    1       j       
+53       goto                   48      
+54       *      i       24      t031    
+55       +      m1      t031    t030    
+56       *      j       8       t033    
+57       +      t030    t033    t032    
+58       =[]    m1      t032    t034    
+59       param                  t034    
+60       call   printFlt1       t035    
+61       =      1               t036    
+62       param                  t036    
+63       call   printStr1       t037    
+64       goto                   51      
+65       =      2               t038    
+66       param                  t038    
+67       call   printStr1       t039    
+68       goto                   43      
+69       =      3               t040    
+70       param                  t040    
+71       call   printStr1       t041    
+72       =      0               t042    
+73       =      t042            i       
+74       =      2               t043    
+75       <      i       t043    80      
+76       goto                   103     
+77       =      i               t044    
+78       +      t044    1       i       
+79       goto                   74      
+80       =      0               t045    
+81       =      t045            j       
+82       =      3               t046    
+83       <      j       t046    88      
+84       goto                   99      
+85       =      j               t047    
+86       +      t047    1       j       
+87       goto                   82      
+88       *      i       24      t049    
+89       +      m2      t049    t048    
+90       *      j       8       t051    
+91       +      t048    t051    t050    
+92       =[]    m2      t050    t052    
+93       param                  t052    
+94       call   printFlt1       t053    
+95       =      4               t054    
+96       param                  t054    
+97       call   printStr1       t055    
+98       goto                   85      
+99       =      5               t056    
+100      param                  t056    
+101      call   printStr1       t057    
+102      goto                   77      
+103      =      m1      m1      t058    
+104      =      m2      m2      t059    
+105      =[]    t058    0       t061    
+106      =[]    t059    0       t062    
+107      +      t061    t062    t063    
+108      []=    0       t063    t060    
+109      =[]    t058    8       t061    
+110      =[]    t059    8       t062    
+111      +      t061    t062    t063    
+112      []=    8       t063    t060    
+113      =[]    t058    16      t061    
+114      =[]    t059    16      t062    
+115      +      t061    t062    t063    
+116      []=    16      t063    t060    
+117      =[]    t058    24      t061    
+118      =[]    t059    24      t062    
+119      +      t061    t062    t063    
+120      []=    24      t063    t060    
+121      =[]    t058    32      t061    
+122      =[]    t059    32      t062    
+123      +      t061    t062    t063    
+124      []=    32      t063    t060    
+125      =[]    t058    40      t061    
+126      =[]    t059    40      t062    
+127      +      t061    t062    t063    
+128      []=    40      t063    t060    
+129      =[]    t058    48      t061    
+130      =[]    t059    48      t062    
+131      +      t061    t062    t063    
+132      []=    48      t063    t060    
+133      =      t060            m_add   
+134      =      6               t064    
+135      param                  t064    
+136      call   printStr1       t065    
+137      =      0               t066    
+138      =      t066            i       
+139      =      2               t067    
+140      <      i       t067    145     
+141      goto                   168     
+142      =      i               t068    
+143      +      t068    1       i       
+144      goto                   139     
+145      =      0               t069    
+146      =      t069            j       
+147      =      3               t070    
+148      <      j       t070    153     
+149      goto                   164     
+150      =      j               t071    
+151      +      t071    1       j       
+152      goto                   147     
+153      *      i       24      t073    
+154      +      m_add   t073    t072    
+155      *      j       8       t075    
+156      +      t072    t075    t074    
+157      =[]    m_add   t074    t076    
+158      param                  t076    
+159      call   printFlt1       t077    
+160      =      7               t078    
+161      param                  t078    
+162      call   printStr1       t079    
+163      goto                   150     
+164      =      8               t080    
+165      param                  t080    
+166      call   printStr1       t081    
+167      goto                   142     
+168      =      m1      m1      t082    
+169      =      m2      m2      t083    
+170      =[]    t082    0       t085    
+171      =[]    t083    0       t086    
+172      -      t085    t086    t087    
+173      []=    0       t087    t084    
+174      =[]    t082    8       t085    
+175      =[]    t083    8       t086    
+176      -      t085    t086    t087    
+177      []=    8       t087    t084    
+178      =[]    t082    16      t085    
+179      =[]    t083    16      t086    
+180      -      t085    t086    t087    
+181      []=    16      t087    t084    
+182      =[]    t082    24      t085    
+183      =[]    t083    24      t086    
+184      -      t085    t086    t087    
+185      []=    24      t087    t084    
+186      =[]    t082    32      t085    
+187      =[]    t083    32      t086    
+188      -      t085    t086    t087    
+189      []=    32      t087    t084    
+190      =[]    t082    40      t085    
+191      =[]    t083    40      t086    
+192      -      t085    t086    t087    
+193      []=    40      t087    t084    
+194      =[]    t082    48      t085    
+195      =[]    t083    48      t086    
+196      -      t085    t086    t087    
+197      []=    48      t087    t084    
+198      =      t084            m_sub   
+199      =      9               t088    
+200      param                  t088    
+201      call   printStr1       t089    
+202      =      0               t090    
+203      =      t090            i       
+204      =      2               t091    
+205      <      i       t091    210     
+206      goto                   233     
+207      =      i               t092    
+208      +      t092    1       i       
+209      goto                   204     
+210      =      0               t093    
+211      =      t093            j       
+212      =      3               t094    
+213      <      j       t094    218     
+214      goto                   229     
+215      =      j               t095    
+216      +      t095    1       j       
+217      goto                   212     
+218      *      i       24      t097    
+219      +      m_sub   t097    t096    
+220      *      j       8       t099    
+221      +      t096    t099    t098    
+222      =[]    m_sub   t098    t100    
+223      param                  t100    
+224      call   printFlt1       t101    
+225      =      10              t102    
+226      param                  t102    
+227      call   printStr1       t103    
+228      goto                   215     
+229      =      11              t104    
+230      param                  t104    
+231      call   printStr1       t105    
+232      goto                   207     
+233      =[]    m1      0       t107    
+234      []=    0       t107    t106    
+235      =[]    m1      8       t107    
+236      []=    16      t107    t106    
+237      =[]    m1      16      t107    
+238      []=    32      t107    t106    
+239      =[]    m1      24      t107    
+240      []=    8       t107    t106    
+241      =[]    m1      32      t107    
+242      []=    24      t107    t106    
+243      =[]    m1      40      t107    
+244      []=    40      t107    t106    
+245      =      t106            m_trans 
+246      =      12              t108    
+247      param                  t108    
+248      call   printStr1       t109    
+249      =      0               t110    
+250      =      t110            i       
+251      =      3               t111    
+252      <      i       t111    257     
+253      goto                   280     
+254      =      i               t112    
+255      +      t112    1       i       
+256      goto                   251     
+257      =      0               t113    
+258      =      t113            j       
+259      =      2               t114    
+260      <      j       t114    265     
+261      goto                   276     
+262      =      j               t115    
+263      +      t115    1       j       
+264      goto                   259     
+265      *      i       16      t117    
+266      +      m_trans t117    t116    
+267      *      j       8       t119    
+268      +      t116    t119    t118    
+269      =[]    m_trans t118    t120    
+270      param                  t120    
+271      call   printFlt1       t121    
+272      =      13              t122    
+273      param                  t122    
+274      call   printStr1       t123    
+275      goto                   262     
+276      =      14              t124    
+277      param                  t124    
+278      call   printStr1       t125    
+279      goto                   254     
+280      =      0               t126    
+281      ret                    t126    
+282      op                     main    
+gcc -Wall -c ass5_15CS10045_5.s
+gcc ass5_15CS10045_5.o -o test5 -L. -lprintlib

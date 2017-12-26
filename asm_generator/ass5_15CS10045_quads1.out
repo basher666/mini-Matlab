@@ -1,0 +1,341 @@
+yacc -dtv ass5_15CS10045.y -W
+flex ass5_15CS10045.l
+g++ -c lex.yy.c
+g++ -c y.tab.c
+g++ -c ass5_15CS10045_translator.h
+g++ -c ass5_15CS10045_translator.cxx
+g++ -c ass5_15CS10045_target_translator.cxx
+gcc -Wall -c ass2_15CS10045.c -o printlib.o
+ar -rcs libprintlib.a printlib.o
+g++ lex.yy.o y.tab.o ass5_15CS10045_translator.o ass5_15CS10045_target_translator.o -lfl -o comp
+./comp 1
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: Global                                         Parent: null
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+printStr                 int                      function                        4       0       printStr
+printInt                 int                      function                        4       4       printInt
+readInt                  int                      function                        4       8       readInt
+printFlt                 int                      function                        4       12      printFlt
+readFlt                  int                      function                        4       16      readFlt
+aa                       double                   local       2.41                8       20      null
+t000                     double                   temp        2.41                8       28      null
+g_i                      int                      local       5202                4       36      null
+t001                     int                      temp        5202                4       40      null
+main                     void                     function                        0       44      main
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printStr                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(char)                param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printInt                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        int                      param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: readInt                                        Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(int)                 param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printFlt                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        double                   param                           8       0       null
+retVal                   int                      local                           4       8       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: readFlt                                        Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(double)              param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: main                                           Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+m                        Matrix(2,3,double)       local       {1.3,2.3,3.3;4.3,5.3,6.3}56      48      null
+t000                     int                      temp        2                   4       56      null
+t001                     int                      temp        3                   4       60      null
+t002                     double                   temp        1.3                 8       64      null
+t003                     double                   temp        2.3                 8       72      null
+t004                     double                   temp        3.3                 8       80      null
+t005                     double                   temp        4.3                 8       88      null
+t006                     double                   temp        5.3                 8       96      null
+t007                     double                   temp        6.3                 8       104     null
+d                        double                   local       22.22               8       112     null
+t008                     double                   temp        22.22               8       120     null
+str                      ptr(char)                local       "\n an indirect string printing example \n"4       128     null
+t009                     ptr(char)                temp        "\n an indirect string printing example \n"4       132     null
+printStr                 int                      local                           4       136     null
+t010                     int                      temp                            4       140     null
+t011                     ptr(char)                temp        "\n printing local double d = "4       144     null
+t012                     int                      temp                            4       148     null
+printFlt                 int                      local                           4       152     null
+t013                     int                      temp                            4       156     null
+t014                     ptr(char)                temp        "\n printing global double aa = "4       160     null
+t015                     int                      temp                            4       164     null
+aa                       int                      local                           4       168     null
+t016                     int                      temp                            4       172     null
+t017                     ptr(char)                temp        "\n"                4       176     null
+t018                     int                      temp                            4       180     null
+t019                     ptr(char)                temp        "\n printing global int g_i = "4       184     null
+t020                     int                      temp                            4       188     null
+printInt                 int                      local                           4       192     null
+g_i                      int                      local                           4       196     null
+t021                     int                      temp                            4       200     null
+t022                     ptr(char)                temp        "\n printing local int ->"4       204     null
+t023                     int                      temp                            4       208     null
+t024                     int                      temp        23                  4       212     null
+t025                     int                      temp                            4       216     null
+t026                     ptr(char)                temp        "\n"                4       220     null
+t027                     int                      temp                            4       224     null
+i                        int                      local       0                   4       228     null
+t028                     int                      temp        0                   4       232     null
+j                        int                      local       0                   4       236     null
+t029                     int                      temp        0                   4       240     null
+t030                     int                      temp        0                   4       244     null
+t031                     int                      temp        2                   4       248     null
+t032                     int                      temp                            4       252     null
+t033                     int                      temp        0                   4       256     null
+t034                     int                      temp        3                   4       260     null
+t035                     int                      temp                            4       264     null
+t036                     int                      temp                            4       268     null
+t037                     int                      temp                            4       272     null
+t038                     int                      temp                            4       276     null
+t039                     int                      temp                            4       280     null
+t040                     double                   temp                            4       284     null
+t041                     int                      temp                            4       288     null
+t042                     ptr(char)                temp        "\t"                4       292     null
+t043                     int                      temp                            4       296     null
+t044                     ptr(char)                temp        "\n"                4       300     null
+t045                     int                      temp                            4       304     null
+t046                     ptr(char)                temp        "i="                4       308     null
+t047                     int                      temp                            4       312     null
+t048                     int                      temp                            4       316     null
+t049                     ptr(char)                temp        "j="                4       320     null
+t050                     int                      temp                            4       324     null
+t051                     int                      temp                            4       328     null
+
+==============================
+Quad Translation
+------------------------------
+0   ->	t000 = 2.41
+1   ->	aa=t000
+2   ->	t001=5202
+3   ->	g_i=t001
+
+main: 
+
+5   ->	t000=2
+6   ->	t001=3
+7   ->	t002 = 1.3
+8   ->	t003 = 2.3
+9   ->	t004 = 3.3
+10  ->	t005 = 4.3
+11  ->	t006 = 5.3
+12  ->	t007 = 6.3
+13  ->	m[0]=t002
+14  ->	m[8]=t003
+15  ->	m[16]=t004
+16  ->	m[24]=t005
+17  ->	m[32]=t006
+18  ->	m[40]=t007
+19  ->	t008 = 22.22
+20  ->	d=t008
+21  ->	t009 = 0
+22  ->	str=t009
+23  ->	param str
+24  ->	t010 = call printStr, 1
+25  ->	t011 = 1
+26  ->	param t011
+27  ->	t012 = call printStr, 1
+28  ->	param d
+29  ->	t013 = call printFlt, 1
+30  ->	t014 = 2
+31  ->	param t014
+32  ->	t015 = call printStr, 1
+33  ->	param aa
+34  ->	t016 = call printFlt, 1
+35  ->	t017 = 3
+36  ->	param t017
+37  ->	t018 = call printStr, 1
+38  ->	t019 = 4
+39  ->	param t019
+40  ->	t020 = call printStr, 1
+41  ->	param g_i
+42  ->	t021 = call printInt, 1
+43  ->	t022 = 5
+44  ->	param t022
+45  ->	t023 = call printStr, 1
+46  ->	t024=23
+47  ->	param t024
+48  ->	t025 = call printInt, 1
+49  ->	t026 = 6
+50  ->	param t026
+51  ->	t027 = call printStr, 1
+52  ->	t028=0
+53  ->	i=t028
+54  ->	t029=0
+55  ->	j=t029
+56  ->	t030=0
+57  ->	i=t030
+58  ->	t031=2
+59  ->	if i < t031 goto 64
+60  ->	goto 87
+61  ->	t032=i
+62  ->	i=t032 + 1
+63  ->	goto 58
+64  ->	t033=0
+65  ->	j=t033
+66  ->	t034=3
+67  ->	if j < t034 goto 72
+68  ->	goto 83
+69  ->	t035=j
+70  ->	j=t035 + 1
+71  ->	goto 66
+72  ->	t037=i * 24
+73  ->	t036=m + t037
+74  ->	t039=j * 8
+75  ->	t038=t036 + t039
+76  ->	t040 = m[t038]
+77  ->	param t040
+78  ->	t041 = call printFlt, 1
+79  ->	t042 = 7
+80  ->	param t042
+81  ->	t043 = call printStr, 1
+82  ->	goto 69
+83  ->	t044 = 8
+84  ->	param t044
+85  ->	t045 = call printStr, 1
+86  ->	goto 61
+87  ->	t046 = 9
+88  ->	param t046
+89  ->	t047 = call printStr, 1
+90  ->	param i
+91  ->	t048 = call printInt, 1
+92  ->	t049 = 10
+93  ->	param t049
+94  ->	t050 = call printStr, 1
+95  ->	param j
+96  ->	t051 = call printInt, 1
+97  ->	
+------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Quad Table ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+index    op     arg 1   arg 2   result  
+0        =      2.41            t000    
+1        =      t000            aa      
+2        =      5202            t001    
+3        =      t001            g_i     
+4        op                     main    
+5        =      2               t000    
+6        =      3               t001    
+7        =      1.3             t002    
+8        =      2.3             t003    
+9        =      3.3             t004    
+10       =      4.3             t005    
+11       =      5.3             t006    
+12       =      6.3             t007    
+13       []=    0       t002    m       
+14       []=    8       t003    m       
+15       []=    16      t004    m       
+16       []=    24      t005    m       
+17       []=    32      t006    m       
+18       []=    40      t007    m       
+19       =      22.22           t008    
+20       =      t008            d       
+21       =      0               t009    
+22       =      t009            str     
+23       param                  str     
+24       call   printStr1       t010    
+25       =      1               t011    
+26       param                  t011    
+27       call   printStr1       t012    
+28       param                  d       
+29       call   printFlt1       t013    
+30       =      2               t014    
+31       param                  t014    
+32       call   printStr1       t015    
+33       param                  aa      
+34       call   printFlt1       t016    
+35       =      3               t017    
+36       param                  t017    
+37       call   printStr1       t018    
+38       =      4               t019    
+39       param                  t019    
+40       call   printStr1       t020    
+41       param                  g_i     
+42       call   printInt1       t021    
+43       =      5               t022    
+44       param                  t022    
+45       call   printStr1       t023    
+46       =      23              t024    
+47       param                  t024    
+48       call   printInt1       t025    
+49       =      6               t026    
+50       param                  t026    
+51       call   printStr1       t027    
+52       =      0               t028    
+53       =      t028            i       
+54       =      0               t029    
+55       =      t029            j       
+56       =      0               t030    
+57       =      t030            i       
+58       =      2               t031    
+59       <      i       t031    64      
+60       goto                   87      
+61       =      i               t032    
+62       +      t032    1       i       
+63       goto                   58      
+64       =      0               t033    
+65       =      t033            j       
+66       =      3               t034    
+67       <      j       t034    72      
+68       goto                   83      
+69       =      j               t035    
+70       +      t035    1       j       
+71       goto                   66      
+72       *      i       24      t037    
+73       +      m       t037    t036    
+74       *      j       8       t039    
+75       +      t036    t039    t038    
+76       =[]    m       t038    t040    
+77       param                  t040    
+78       call   printFlt1       t041    
+79       =      7               t042    
+80       param                  t042    
+81       call   printStr1       t043    
+82       goto                   69      
+83       =      8               t044    
+84       param                  t044    
+85       call   printStr1       t045    
+86       goto                   61      
+87       =      9               t046    
+88       param                  t046    
+89       call   printStr1       t047    
+90       param                  i       
+91       call   printInt1       t048    
+92       =      10              t049    
+93       param                  t049    
+94       call   printStr1       t050    
+95       param                  j       
+96       call   printInt1       t051    
+97       op                     main    
+gcc -c ass5_15CS10045_1.s
+gcc ass5_15CS10045_1.o -o test1 -L. -lprintlib

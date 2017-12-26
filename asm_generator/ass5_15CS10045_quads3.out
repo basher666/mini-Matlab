@@ -1,0 +1,232 @@
+./comp 3
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: Global                                         Parent: null
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+printStr                 int                      function                        4       0       printStr
+printInt                 int                      function                        4       4       printInt
+readInt                  int                      function                        4       8       readInt
+readFlt                  int                      function                        4       12      readFlt
+printFlt                 int                      function                        4       16      printFlt
+fib                      int                      function                        4       20      fib
+main                     int                      function                        4       24      main
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printStr                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(char)                param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printInt                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        int                      param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: readInt                                        Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(int)                 param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: readFlt                                        Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        ptr(int)                 param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: printFlt                                       Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        int                      param                           4       0       null
+retVal                   int                      local                           4       4       null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: fib                                            Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+a                        int                      param                           4       0       null
+retVal                   int                      local                           4       4       null
+printStr                 int                      local                           4       8       null
+t000                     ptr(char)                temp        "Entered the fib function\n"4       12      null
+t001                     int                      temp                            4       16      null
+f                        int                      local       1                   4       20      null
+t002                     int                      temp        1                   4       24      null
+f_1                      int                      local       0                   4       28      null
+t003                     int                      temp        0                   4       32      null
+i                        int                      local       1                   4       36      null
+t004                     int                      temp        1                   4       40      null
+temp                     int                      local                           4       44      null
+t005                     int                      temp                            4       48      null
+t006                     int                      temp        1                   4       52      null
+t007                     int                      temp                            4       56      null
+t008                     ptr(char)                temp        "\nThe fibonacci number is : "4       60      null
+t009                     int                      temp                            4       64      null
+printInt                 int                      local                           4       68      null
+t010                     int                      temp                            4       72      null
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: main                                           Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+retVal                   int                      local                           4       0       null
+printStr                 int                      local                           4       4       null
+t000                     ptr(char)                temp        "enter the i for finding its fibonacci number : "4       8       null
+t001                     int                      temp                            4       12      null
+i                        int                      local                           4       16      null
+readInt                  int                      local                           4       20      null
+t002                     ptr(int)                 temp                            4       24      null
+t003                     int                      temp                            4       28      null
+t004                     ptr(char)                temp        "\nYou Entered : "  4       32      null
+t005                     int                      temp                            4       36      null
+printInt                 int                      local                           4       40      null
+t006                     int                      temp                            4       44      null
+t007                     ptr(char)                temp        "\nNow, entering the function to calculate fibonacci numbers for i entered\n"4       48      null
+t008                     int                      temp                            4       52      null
+j                        int                      local                           4       56      null
+fib                      int                      local                           4       60      null
+t009                     int                      temp                            4       64      null
+t010                     ptr(char)                temp        "\n\nReturned from the fib function\n\n"4       68      null
+t011                     int                      temp                            4       72      null
+t012                     ptr(char)                temp        "value returned is = "4       76      null
+t013                     int                      temp                            4       80      null
+t014                     int                      temp                            4       84      null
+t015                     int                      temp        1                   4       88      null
+
+==============================
+Quad Translation
+------------------------------
+
+fib: 
+
+1   ->	t000 = 0
+2   ->	param t000
+3   ->	t001 = call printStr, 1
+4   ->	t002=1
+5   ->	f=t002
+6   ->	t003=0
+7   ->	f_1=t003
+8   ->	t004=1
+9   ->	i=t004
+10  ->	if i < a goto 12
+11  ->	goto 20
+12  ->	temp=f
+13  ->	t005=f + f_1
+14  ->	f=t005
+15  ->	f_1=temp
+16  ->	t006=1
+17  ->	t007=i + t006
+18  ->	i=t007
+19  ->	goto 10
+20  ->	t008 = 1
+21  ->	param t008
+22  ->	t009 = call printStr, 1
+23  ->	param f
+24  ->	t010 = call printInt, 1
+25  ->	ret f
+26  ->	
+
+main: 
+
+28  ->	t000 = 2
+29  ->	param t000
+30  ->	t001 = call printStr, 1
+31  ->	t002 = &i
+32  ->	param t002
+33  ->	t003 = call readInt, 1
+34  ->	t004 = 3
+35  ->	param t004
+36  ->	t005 = call printStr, 1
+37  ->	param i
+38  ->	t006 = call printInt, 1
+39  ->	t007 = 4
+40  ->	param t007
+41  ->	t008 = call printStr, 1
+42  ->	param i
+43  ->	t009 = call fib, 1
+44  ->	j=t009
+45  ->	t010 = 5
+46  ->	param t010
+47  ->	t011 = call printStr, 1
+48  ->	t012 = 6
+49  ->	param t012
+50  ->	t013 = call printStr, 1
+51  ->	param j
+52  ->	t014 = call printInt, 1
+53  ->	t015=1
+54  ->	ret t015
+55  ->	
+------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Quad Table ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+index    op     arg 1   arg 2   result  
+0        op                     fib     
+1        =      0               t000    
+2        param                  t000    
+3        call   printStr1       t001    
+4        =      1               t002    
+5        =      t002            f       
+6        =      0               t003    
+7        =      t003            f_1     
+8        =      1               t004    
+9        =      t004            i       
+10       <      i       a       12      
+11       goto                   20      
+12       =      f               temp    
+13       +      f       f_1     t005    
+14       =      t005            f       
+15       =      temp            f_1     
+16       =      1               t006    
+17       +      i       t006    t007    
+18       =      t007            i       
+19       goto                   10      
+20       =      1               t008    
+21       param                  t008    
+22       call   printStr1       t009    
+23       param                  f       
+24       call   printInt1       t010    
+25       ret                    f       
+26       op                     fib     
+27       op                     main    
+28       =      2               t000    
+29       param                  t000    
+30       call   printStr1       t001    
+31       &      i               t002    
+32       param                  t002    
+33       call   readInt 1       t003    
+34       =      3               t004    
+35       param                  t004    
+36       call   printStr1       t005    
+37       param                  i       
+38       call   printInt1       t006    
+39       =      4               t007    
+40       param                  t007    
+41       call   printStr1       t008    
+42       param                  i       
+43       call   fib     1       t009    
+44       =      t009            j       
+45       =      5               t010    
+46       param                  t010    
+47       call   printStr1       t011    
+48       =      6               t012    
+49       param                  t012    
+50       call   printStr1       t013    
+51       param                  j       
+52       call   printInt1       t014    
+53       =      1               t015    
+54       ret                    t015    
+55       op                     main    
+gcc -Wall -c ass5_15CS10045_3.s
+gcc ass5_15CS10045_3.o -o test3 -L. -lprintlib

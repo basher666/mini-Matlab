@@ -1,0 +1,84 @@
+symbol table printing start 
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: Global                                         Parent: null
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+main                     int                      function                        4       0       main
+
++++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----+++++-----
+Symbol Table: main                                           Parent: Global
+..............................................................................................................
+Name                     Type                     Category    Initial Value       Size    Offset  Nest 
+**************************************************************************************************************
+retVal                   int                      local                           4       0       null
+m1                       Matrix(2,2,double)       local                           40      4       null
+#t000                    int                      temp        2                   4       44      null
+#t001                    int                      temp        2                   4       48      null
+m2                       Matrix(2,2,double)       local                           40      52      null
+#t002                    int                      temp        2                   4       92      null
+#t003                    int                      temp        2                   4       96      null
+p                        ptr(int)                 local                           4       100     null
+#t004                    int                      temp        2                   4       104     null
+#t005                    int                      temp                            4       108     null
+#t006                    ptr(null)                temp                            4       112     null
+#t007                    ptr(null)                temp                            4       116     null
+m3                       double                   local                           8       120     null
+#t008                    Matrix(2,2,double)       temp                            4       128     null
+#t009                    Matrix(2,2,double)       temp                            4       132     null
+m4                       double                   local                           8       136     null
+#t010                    Matrix(2,2,double)       temp                            4       144     null
+#t011                    Matrix(2,2,double)       temp                            4       148     null
+#t012                    Matrix(2,2,double)       temp                            4       152     null
+m5                       double                   local                           8       156     null
+#t013                    Matrix(2,2,double)       temp                            4       164     null
+#t014                    Matrix(2,2,double)       temp                            4       168     null
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+quad array printing start
+==============================
+Quad Translation
+------------------------------
+
+main: 
+
+1   ->	#t000=2
+2   ->	#t001=2
+3   ->	#t002=2
+4   ->	#t003=2
+5   ->	#t004=2
+6   ->	#t006=p + #t004
+7   ->	#t007=p
+8   ->	p=#t007 - 4
+9   ->	#t008=m1
+10  ->	#t009=#t008 * m2
+11  ->	m3=#t009
+12  ->	#t010=m1
+13  ->	#t011=m2
+14  ->	#t012=#t010 + #t011
+15  ->	m4=#t012
+16  ->	#t013=m1
+17  ->	#t014=#t013 / m2
+18  ->	m5=#t014
+------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Quad Table ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+index    op     arg 1   arg 2   result  
+0        op                     main    
+1        =      2               #t000   
+2        =      2               #t001   
+3        =      2               #t002   
+4        =      2               #t003   
+5        =      2               #t004   
+6        +      p       #t004   #t006   
+7        =      p               #t007   
+8        -      #t007   4       p       
+9        =      m1      m1      #t008   
+10       *      #t008   m2      #t009   
+11       =      #t009           m3      
+12       =      m1      m1      #t010   
+13       =      m2      m2      #t011   
+14       +      #t010   #t011   #t012   
+15       =      #t012           m4      
+16       =      m1      m1      #t013   
+17       /      #t013   m2      #t014   
+18       =      #t014           m5      
